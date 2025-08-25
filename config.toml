@@ -21,10 +21,10 @@ smart_punctuation = true
 [extra]
 # Put all your custom variables here
 menu_items = [
-    {name = "Programme", url = "/programme"},
-    {name = "Accès", url = "/acces"},
-    {name = "Hébergements", url = "/hebergements"},
-    {name = "FAQ", url = "/faq"},
-   # {name = "RSVP", url = "/rsvp"},
-   # {name = "Cadeaux", url = "/cadeaux"},
+    {name = "Programme", url = "/wedding/programme"},
+    {name = "Accès", url = "/wedding/acces"},
+    {name = "Hébergements", url = "/wedding/hebergements"},
+    {name = "FAQ", url = "/wedding/faq"},
+   # {name = "RSVP", url = "/wedding/rsvp"},
+   # {name = "Cadeaux", url = "/wedding/cadeaux"},
 ]
