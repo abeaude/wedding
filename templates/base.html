@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+
+    <title>{{ page.title | default(value=config.title) | safe }}</title>
+    <meta name="description" content="{{ page.description | default(value=config.description) | safe }}">
+
+    <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <nav class="title-nav">
+                <div class="trigger">
+                    <a class="page-link-title" href="{{ config.base_url }}/">{{ config.title }}</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+
+            {% block header_menu %}
+            <nav class="site-nav">
+                {%- if config.extra.menu_items %}
+                {%- set menu_items = config.extra.menu_items -%}
+                {%- for item in menu_items %}
+                <a class="page-link" href="{{ item.url | safe }}">{{ item.name
+                    | safe }}</a>
+                {% endfor -%}
+                {% endif -%}
+            </nav>
+            {% endblock header_menu %}
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const siteNav = document.querySelector('.site-nav');
+            const siteHeader = document.querySelector('.site-header');
+            const body = document.body;
+
+            if (mobileToggle && siteNav && siteHeader) {
+                mobileToggle.addEventListener('click', function () {
+                    siteNav.classList.toggle('nav-open');
+                    mobileToggle.classList.toggle('active');
+                    siteHeader.classList.toggle('nav-expanded');
+                    body.classList.toggle('nav-open');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = siteNav.querySelectorAll('.page-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!mobileToggle.contains(e.target) && !siteNav.contains(e.target)) {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

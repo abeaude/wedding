@@ -1,0 +1,766 @@
+@charset "utf-8";
+
+// Google Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+// Wedding color palette - Green & Gold theme
+$primary-color: #9c751d; // Wedding gold
+$secondary-color: #095228; // Wedding green
+$accent-color: #adc3b1; // Soft sage green
+$text-primary: #2d3d2f; // Dark forest green for text
+$text-secondary: #5a6b3e; // Muted olive green
+$background-gradient-start: #f8faf9; // Very light sage
+$background-gradient-end: #adc3b1; // Wedding background color
+$nav-background: rgba(255, 255, 255, 0.95);
+$card-background: rgba(255, 255, 255, 0.9);
+$gold-light: #b8942b; // Lighter gold variant
+$green-light: #4a8c5f; // Lighter green variant
+$shadow-light: rgba(9, 82, 40, 0.1);
+$shadow-medium: rgba(9, 82, 40, 0.15);
+
+// Typography
+$font-heading: 'Playfair Display', Georgia, serif;
+$font-body: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+// Typography
+$base-font-size: 1.125rem; // 18px
+$base-line-height: 1.4;
+$nav-height: 68px;
+$mobile-nav-height: 60px;
+
+// Modern transitions and animations
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Responsive breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    background: linear-gradient(135deg, $background-gradient-start 0%, $background-gradient-end 100%);
+    color: $text-primary;
+    scroll-behavior: smooth;
+    min-height: 90vh;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// Prevent scrolling when mobile nav is open
+body.nav-open {
+    // Remove overflow hidden as we want content to be pushed down
+}
+
+// Modern link styles
+a {
+    text-decoration: none;
+    color: $primary-color;
+    transition: $transition-smooth;
+    position: relative;
+
+    &:hover {
+        color: darken($primary-color, 15%);
+        text-decoration: none;
+    }
+
+    // Elegant underline effect
+    &:not(.page-link):not(.page-link-title)::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $primary-color;
+        transition: width 0.3s ease;
+    }
+
+    &:not(.page-link):not(.page-link-title):hover::after {
+        width: 100%;
+    }
+}
+
+// Add this to your existing style.scss file, after the .home-intro section
+
+.home-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 3rem;
+
+    @media (max-width: $mobile) {
+        padding: 3.5rem 1rem;
+    }
+
+    // Enhanced responsive image styling
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba($secondary-color, 0.15);
+        transition: $transition-smooth;
+        object-fit: cover;
+
+        // Prevent image from being too tall on mobile
+        @media (max-width: $mobile) {
+            max-height: 60vh;
+            border-radius: 10px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        // For landscape images on mobile, limit height further
+        @media (max-width: $mobile) and (orientation: landscape) {
+            max-height: 40vh;
+        }
+
+        // For very small screens
+        @media (max-width: 480px) {
+            max-height: 50vh;
+        }
+    }
+
+    // Responsive paragraph styling
+    p {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.3;
+        color: $text-primary;
+
+        @media (max-width: $mobile) {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.1;
+        }
+    }
+}
+
+.banner-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba($secondary-color, 0.15);
+    margin: 0 auto;
+    transition: $transition-smooth;
+
+    @media (max-width: $mobile) {
+        border-radius: 10px;
+    }
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: $transition-smooth;
+
+    // Ensure the image never overflows and maintains aspect ratio
+    max-width: 100%;
+
+    // On mobile, limit height to prevent very tall images
+    @media (max-width: $mobile) {
+        max-height: 60vh;
+        min-height: 200px; // Minimum height for very wide images
+    }
+
+    // For landscape orientation on mobile
+    @media (max-width: $mobile) and (orientation: landscape) {
+        max-height: 40vh;
+        min-height: 150px;
+    }
+
+    // For very small screens
+    @media (max-width: 480px) {
+        max-height: 50vh;
+        min-height: 180px;
+    }
+}
+
+.wedding-date {
+    margin-top: 0.1rem;
+    text-align: center;
+    width: 100%;
+
+    @media (max-width: $mobile) {
+        margin-top: 0.01rem;
+    }
+}
+
+.date-text {
+    font-family: 'Great Vibes', serif;
+    font-size: clamp(2.5rem, 10vw, 8rem);
+    font-weight: 600;
+    color: $primary-color;
+    text-shadow: 2px 2px 4px rgba($secondary-color, 0.2);
+    letter-spacing: 0.075em;
+    display: inline-block;
+    position: relative;
+
+    // Add a subtle gradient effect
+    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 3%) 50%, $gold-light 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    // Add decorative elements
+    &::before,
+    &::after {
+        content: '✧';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.6em;
+        color: $primary-color;
+        opacity: 1;
+        -webkit-text-fill-color: currentColor;
+    }
+
+    &::before {
+        left: -1.5em;
+    }
+
+    &::after {
+        right: -1.5em;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: clamp(2rem, 15vw, 6rem);
+        letter-spacing: 0.03em;
+
+
+        &::before {
+            left: -1em;
+        }
+
+        &::after {
+            right: -1em;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        &::before,
+        &::after {
+            display: none; // Hide decorative elements on very small screens
+        }
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Modern navigation with glassmorphism effect
+.site-header {
+    font-weight: 500;
+    background: $nav-background;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba($secondary-color, 0.1);
+    box-shadow: 0 4px 20px $shadow-light;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: $nav-height;
+    width: 100%;
+    z-index: 1000;
+    transition: $transition-smooth;
+
+
+    .wrapper {
+        padding: 0 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $nav-height;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: $mobile) {
+        min-height: $mobile-nav-height;
+        transition: min-height 0.3s ease-in-out;
+
+        &.nav-expanded {
+            min-height: auto;
+        }
+
+        .wrapper {
+            padding: 0 1rem;
+            height: auto;
+            min-height: $mobile-nav-height;
+            position: relative;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+}
+
+// Enhanced site title
+.site-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 0;
+    color: $secondary-color;
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+        transform: translateY(-1px);
+    }
+}
+
+// Modern title navigation
+.title-nav {
+    display: flex;
+    align-items: center;
+
+    .page-link-title {
+        font-size: 1.75rem;
+        font-weight: 500;
+        font-family: $font-heading;
+        color: $secondary-color;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: $transition-smooth;
+        letter-spacing: -0.5px;
+
+        &:hover {
+            color: $primary-color;
+            background: rgba($primary-color, 0.1);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 1.4rem;
+            padding: 0.5rem 0.5rem;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        min-height: $mobile-nav-height;
+    }
+}
+
+// Mobile menu toggle button
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 1001;
+    transition: $transition-smooth;
+
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background: $secondary-color;
+        transition: $transition-smooth;
+        transform-origin: center;
+        border-radius: 2px;
+    }
+
+    &.active {
+        .hamburger-line {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+        }
+    }
+
+    &:hover {
+        .hamburger-line {
+            background: $primary-color;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+// Enhanced site navigation
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .page-link {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $text-secondary;
+        padding: 0.75rem 1.25rem;
+        border-radius: 25px;
+        transition: $transition-smooth;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        &:hover {
+            color: $primary-color;
+            background: linear-gradient(135deg, rgba($primary-color, 0.1), rgba($secondary-color, 0.05));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba($primary-color, 0.2);
+
+            &::before {
+                left: 100%;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        padding: 0 1rem;
+
+        &.nav-open {
+            max-height: 400px; // Adjust based on number of menu items
+            padding: 1rem;
+            border-top: 1px solid rgba($secondary-color, 0.1);
+        }
+
+        .page-link {
+            width: 100%;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.25rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            border: 2px solid transparent;
+
+            &:hover {
+                transform: none;
+                border-color: rgba($primary-color, 0.3);
+                box-shadow: 0 2px 8px rgba($primary-color, 0.1);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Enhanced header bar
+.header-bar {
+    position: relative;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: $nav-height;
+    background: linear-gradient(135deg, rgba($accent-color, 0.4), rgba($primary-color, 0.1));
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 8px 25px rgba($secondary-color, 0.1);
+
+    h1 {
+        color: $secondary-color;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-family: $font-heading;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        text-shadow: 2px 2px 4px $shadow-light;
+    }
+
+    h2 {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+        font-family: $font-body;
+        line-height: 1.3;
+        color: $text-secondary;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 2rem 1rem;
+        margin-top: $mobile-nav-height;
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+// Enhanced page content
+.page-content {
+    padding: 2rem 0;
+
+    .wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        @media (max-width: $mobile) {
+            padding: 0 1rem;
+        }
+    }
+}
+
+// Modern post styling
+.post {
+    background: $card-background;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba($secondary-color, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba($secondary-color, 0.08);
+    transition: $transition-smooth;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba($secondary-color, 0.18);
+    }
+
+    @media (max-width: $mobile) {
+        padding: 2rem 1.5rem;
+        border-radius: 15px;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+// Enhanced post title
+.post-title {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-family: $font-heading;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: $secondary-color;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, $primary-color, transparent);
+        border-radius: 2px;
+    }
+}
+
+// Enhanced post content
+.post-content {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: $text-primary;
+
+    @media (max-width: $mobile) {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    a {
+        color: $primary-color;
+        font-weight: 500;
+        position: relative;
+
+        &:hover {
+            color: darken($primary-color, 15%);
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $secondary-color;
+        font-family: $font-heading;
+        font-weight: 500;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    h3 {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    h4 {
+        font-size: clamp(1.125rem, 3vw, 1.5rem);
+    }
+
+    h5 {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+    }
+
+    h6 {
+        font-size: clamp(0.875rem, 2vw, 1.125rem);
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 2rem auto;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba($secondary-color, 0.15);
+        transition: $transition-smooth;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba($secondary-color, 0.2);
+        }
+
+        @media (max-width: $mobile) {
+            margin: 1.5rem auto;
+            border-radius: 10px;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+
+    blockquote {
+        border-left: 4px solid $primary-color;
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: $text-secondary;
+        background: linear-gradient(135deg, rgba($accent-color, 0.3), rgba($primary-color, 0.05));
+        padding: 1.5rem;
+        border-radius: 0 10px 10px 0;
+
+        @media (max-width: $mobile) {
+            padding: 1rem;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+    }
+
+    ul,
+    ol {
+        padding-left: 2rem;
+        margin-bottom: 1.5rem;
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: $mobile) {
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+// Enhanced embed frame
+.airbnb-embed-frame {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    transition: $transition-smooth;
+
+
+    @media (max-width: $mobile) {
+        margin: 1.5rem 0;
+    }
+}
+
+// Subtle animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.post {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+// Print styles
+@media print {
+    .site-header {
+        position: static;
+        box-shadow: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .post {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
