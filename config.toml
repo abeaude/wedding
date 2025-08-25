@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://test.com"
+base_url = "https://abeaude.github.io/wedding"
 title = "Juliette & Aurélien"
 description = ""
 default_language = "fr"
