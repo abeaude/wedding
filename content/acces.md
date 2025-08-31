@@ -1,5 +1,5 @@
 +++
-title = "Comment se rendre au gîte l'essentiel ?"
+title = "Comment se rendre au gîte l'Essentiel ?"
 +++
 
 Notre mariage aura lieu au gîte l'Essentiel, [11 place de Fond de France, 38580 Le Haut-Bréda](https://www.openstreetmap.org/way/64002477).
