@@ -4,7 +4,7 @@ title = "Le déroulé des festivités"
 
 ## Vendredi 21 août 2026
 
-Les personnes hébergées sur place peuvent arriver dès 14h, les appartments seront disponibles à 16h. L'après-midi sera consacré à la décoration du lieu.
+Les personnes hébergées sur place peuvent arriver dès 14h, les appartements seront disponibles à 16h. L'après-midi sera consacré à la décoration du lieu.
 
 ## Samedi 22 août 2026
 
