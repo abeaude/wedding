@@ -4,7 +4,7 @@ title = "Les réponses à toutes vos questions"
 
 ## Les enfants sont-ils les bienvenus ?
 
-Les enfants seront les bienvenus. Un repas sera prévu pour les petits sous forme du buffet pendant le cocktail, et une salle ainsi qu'un petit dortoir leur permettront de se retrouver entre eux pour jouer / se reposer pendant le dîner.
+Les enfants seront les bienvenus. Un repas sera prévu pour les petits sous forme de buffet pendant le cocktail, et une salle ainsi qu'un petit dortoir leur permettront de se retrouver entre eux pour jouer / se reposer pendant le dîner.
 **Hélène et Nathalie prendront contact avec vous pour prévoir le bon nombre de baby-sitters, les frais de baby-sitting seront à la charge des parents concernés, nous vous remercions pour votre compréhension**. Pour information le lieu est situé à proximité d'une route et d'un torrent.
 
 ## Les animaux sont-ils les bienvenus ?
