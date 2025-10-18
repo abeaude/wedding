@@ -5,7 +5,7 @@ title = "Les réponses à toutes vos questions"
 ## Les enfants sont-ils les bienvenus ?
 
 Les enfants sont les bienvenus. Un repas sera prévu pour les petits sous forme de buffet pendant le cocktail, et une salle ainsi qu'un petit dortoir leur permettront de se retrouver entre eux pour jouer / se reposer pendant le dîner.
-**Hélène et Nathalie prendront contact avec vous pour prévoir le bon nombre de baby-sitters, les frais de baby-sitting seront à la charge des parents concernés, nous vous remercions pour votre compréhension**. Pour information le lieu est situé à proximité d'une route et d'un torrent.
+**Hélène et Nathalie prendront contact avec vous pour prévoir le bon nombre de baby-sitters, une participation sera demandée aux parents concernés, nous vous remercions pour votre compréhension**. Pour information, le lieu est situé à proximité d'une route et d'un torrent.
 
 ## Les animaux sont-ils les bienvenus ?
 
@@ -30,7 +30,7 @@ Parce que c'est beau, non ?
 
 ## Y a-t-il un parking ?
 
-Oui, juste devant
+Oui, il y a un grand parking juste devant le gîte.
 
 ## Le mariage se déroule-t-il en intérieur ou en extérieur ?
 
