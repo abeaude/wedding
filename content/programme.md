@@ -18,7 +18,7 @@ Nous vous attendons à partir de 14h au Gîte l'Essentiel.
 
 ## Dimanche 23 août 2026
 
-Pour ceux qui le peuvent, retrouvez-nous pour un brunch à partir de 10h, toujours au Gîte l'Essentiel.
+Pour ceux qui le peuvent, retrouvez-nous pour un brunch à partir de 11h, toujours au Gîte l'Essentiel.
 Vous pouvez rester sur place toute la journée, ou aller vous promener dans les alentours.
 
 ## Lundi 24 août 2026
