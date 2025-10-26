@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+
+    <title>Si vous souhaitez nous faire un cadeau</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="https://abeaude.github.io/wedding/style.css?h=a998455af3a7c15dfb7e">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <nav class="title-nav">
+                <div class="trigger">
+                    <a class="page-link-title" href="https:&#x2F;&#x2F;abeaude.github.io&#x2F;wedding/">Juliette &amp; Aurélien</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+
+            
+            <nav class="site-nav">
+                <a class="page-link" href="/wedding/programme">Programme</a>
+                
+                <a class="page-link" href="/wedding/acces">Accès</a>
+                
+                <a class="page-link" href="/wedding/hebergements">Hébergements</a>
+                
+                <a class="page-link" href="/wedding/faq">FAQ</a>
+                
+                <a class="page-link" href="/wedding/rsvp">RSVP</a>
+                </nav>
+            
+        </div>
+    </header>
+
+    
+<div class="page-content">
+    <div class="wrapper">
+        <div class="post"></div>
+
+        <h1 itemprop="name headline" class="post-title">Si vous souhaitez nous faire un cadeau</h1>
+        <div class="post-content">
+            
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const siteNav = document.querySelector('.site-nav');
+            const siteHeader = document.querySelector('.site-header');
+            const body = document.body;
+
+            if (mobileToggle && siteNav && siteHeader) {
+                mobileToggle.addEventListener('click', function () {
+                    siteNav.classList.toggle('nav-open');
+                    mobileToggle.classList.toggle('active');
+                    siteHeader.classList.toggle('nav-expanded');
+                    body.classList.toggle('nav-open');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = siteNav.querySelectorAll('.page-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!mobileToggle.contains(e.target) && !siteNav.contains(e.target)) {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
