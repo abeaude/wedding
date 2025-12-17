@@ -2,6 +2,8 @@
 title = "Quelques hébergements à proximité"
 +++
 
+Chers amis et témoins, nous serons ravis de vous héberger directement sur place, vous pourrez ainsi danser avec nous jusqu'au bout de la nuit (vous pouvez bien sûr vous organiser autrement si vous préférez). Chères familles, il y a de plusieurs possibilités d'hébergement à proximité, vous trouverez quelques exemples ci-dessous :
+
 ## Hôtels
 
 * [Le Madame](https://www.hotel-lemadame.com/)
