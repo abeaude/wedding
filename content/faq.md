@@ -35,3 +35,12 @@ Oui, il y a un grand parking juste devant le gîte.
 ## Le mariage se déroule-t-il en intérieur ou en extérieur ?
 
 Cela dépendra de la météo, mais dans tous les cas le dîner et la soirée seront en intérieur.
+
+## Montagne ça rime avec fromage, non ?
+
+Pas tout à fait mais on comprend l'idée. Pour les amateurs de fromages voici quelques recommendations de fromageries dans la région:
+
+* [La coopérative des entremonts](https://maps.app.goo.gl/qA4QhcfKyQQw2VRF7), dans le massif de la chartreuse. On vous recommande l'estival de réserve.
+* [La Fromagerie La petite souris](https://maps.app.goo.gl/jaxPYve4vTCWEnoy8), dans le centre de Chambéry. Leur beaufort d'été est délicieux.
+* [La Ferme de la Grangette](https://maps.app.goo.gl/fe3PvVjeoy1xw2HT6), à Allevard. Pour découvrir des fromages locaux, en direct de la ferme.
+* [La chèvrerie des 7 Laux](https://maps.app.goo.gl/BPDipgHmWrNaPUqU6), à Theys. Pour les amateurs de fromage de chèvres.
