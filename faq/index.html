@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+
+    <title>Les réponses à toutes vos questions</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="https://abeaude.github.io/wedding/style.css?h=a998455af3a7c15dfb7e">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <nav class="title-nav">
+                <div class="trigger">
+                    <a class="page-link-title" href="https:&#x2F;&#x2F;abeaude.github.io&#x2F;wedding/">Juliette &amp; Aurélien</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+
+            
+            <nav class="site-nav">
+                <a class="page-link" href="/wedding/programme">Programme</a>
+                
+                <a class="page-link" href="/wedding/acces">Accès</a>
+                
+                <a class="page-link" href="/wedding/hebergements">Hébergements</a>
+                
+                <a class="page-link" href="/wedding/faq">FAQ</a>
+                
+                <a class="page-link" href="/wedding/rsvp">RSVP</a>
+                </nav>
+            
+        </div>
+    </header>
+
+    
+<div class="page-content">
+    <div class="wrapper">
+        <div class="post"></div>
+
+        <h1 itemprop="name headline" class="post-title">Les réponses à toutes vos questions</h1>
+        <div class="post-content">
+            <h2 id="les-enfants-sont-ils-les-bienvenus">Les enfants sont-ils les bienvenus ?</h2>
+<p>Les enfants sont les bienvenus. Un repas sera prévu pour les petits sous forme de buffet pendant le cocktail, et une salle ainsi qu’un petit dortoir leur permettront de se retrouver entre eux pour jouer / se reposer pendant le dîner.
+<strong>Hélène et Nathalie prendront contact avec vous pour prévoir le bon nombre de baby-sitters, une participation sera demandée aux parents concernés, nous vous remercions pour votre compréhension</strong>. Pour information, le lieu est situé à proximité d’une route et d’un torrent.</p>
+<h2 id="les-animaux-sont-ils-les-bienvenus">Les animaux sont-ils les bienvenus ?</h2>
+<p>Les animaux domestiques ne sont pas autorisés sur le lieu, que ce soit en intérieur ou en extérieur. Nous vous remercions donc de ne pas les prendre avec vous.</p>
+<h2 id="ou-se-deroule-le-mariage">Où se déroule le mariage ?</h2>
+<p>Voir la page sur <a href="https://abeaude.github.io/wedding/acces/">l’accès</a> au lieu.</p>
+<h2 id="quel-est-le-dress-code">Quel est le dress code ?</h2>
+<p>Laissez vos shorts et chaussures de rando de côté, et sortez vos plus belles tenues ! Les talons aiguilles sont déconseillés car peu pratiques en extérieur.</p>
+<h2 id="qui-sont-les-maries">Qui sont les mariés ?</h2>
+<p>Si vous ne savez pas répondre à cette question, c’est que vous vous êtes égarés…</p>
+<h2 id="pourquoi-les-alpes">Pourquoi les Alpes ?</h2>
+<p>Parce que c’est beau, non ?
+
+<img src="https:&#x2F;&#x2F;abeaude.github.io&#x2F;wedding&#x2F;bouquetin.jpg"></p>
+<h2 id="y-a-t-il-un-parking">Y a-t-il un parking ?</h2>
+<p>Oui, il y a un grand parking juste devant le gîte.</p>
+<h2 id="le-mariage-se-deroule-t-il-en-interieur-ou-en-exterieur">Le mariage se déroule-t-il en intérieur ou en extérieur ?</h2>
+<p>Cela dépendra de la météo, mais dans tous les cas le dîner et la soirée seront en intérieur.</p>
+<h2 id="montagne-ca-rime-avec-fromage-non">Montagne ça rime avec fromage, non ?</h2>
+<p>Pas tout à fait mais on comprend l’idée. Pour les amateurs de fromages voici quelques recommendations de fromageries dans la région:</p>
+<ul>
+<li><a href="https://maps.app.goo.gl/qA4QhcfKyQQw2VRF7">La coopérative des entremonts</a>, dans le massif de la chartreuse. On vous recommande l’estival de réserve.</li>
+<li><a href="https://maps.app.goo.gl/jaxPYve4vTCWEnoy8">La Fromagerie La petite souris</a>, dans le centre de Chambéry. Leur beaufort d’été est délicieux.</li>
+<li><a href="https://maps.app.goo.gl/fe3PvVjeoy1xw2HT6">La Ferme de la Grangette</a>, à Allevard. Pour découvrir des fromages locaux, en direct de la ferme.</li>
+<li><a href="https://maps.app.goo.gl/BPDipgHmWrNaPUqU6">La chèvrerie des 7 Laux</a>, à Theys. Pour les amateurs de fromage de chèvres.</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const siteNav = document.querySelector('.site-nav');
+            const siteHeader = document.querySelector('.site-header');
+            const body = document.body;
+
+            if (mobileToggle && siteNav && siteHeader) {
+                mobileToggle.addEventListener('click', function () {
+                    siteNav.classList.toggle('nav-open');
+                    mobileToggle.classList.toggle('active');
+                    siteHeader.classList.toggle('nav-expanded');
+                    body.classList.toggle('nav-open');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = siteNav.querySelectorAll('.page-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!mobileToggle.contains(e.target) && !siteNav.contains(e.target)) {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

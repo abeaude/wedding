@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+
+    <title>Quelques hébergements à proximité</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="https://abeaude.github.io/wedding/style.css?h=a998455af3a7c15dfb7e">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <nav class="title-nav">
+                <div class="trigger">
+                    <a class="page-link-title" href="https:&#x2F;&#x2F;abeaude.github.io&#x2F;wedding/">Juliette &amp; Aurélien</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+
+            
+            <nav class="site-nav">
+                <a class="page-link" href="/wedding/programme">Programme</a>
+                
+                <a class="page-link" href="/wedding/acces">Accès</a>
+                
+                <a class="page-link" href="/wedding/hebergements">Hébergements</a>
+                
+                <a class="page-link" href="/wedding/faq">FAQ</a>
+                
+                <a class="page-link" href="/wedding/rsvp">RSVP</a>
+                </nav>
+            
+        </div>
+    </header>
+
+    
+<div class="page-content">
+    <div class="wrapper">
+        <div class="post"></div>
+
+        <h1 itemprop="name headline" class="post-title">Quelques hébergements à proximité</h1>
+        <div class="post-content">
+            <p>Chers amis et témoins, nous serons ravis de vous héberger directement sur place, vous pourrez ainsi danser avec nous jusqu’au bout de la nuit (vous pouvez bien sûr vous organiser autrement si vous préférez). Chères familles, il y a de plusieurs possibilités d’hébergement à proximité, vous trouverez quelques exemples ci-dessous :</p>
+<h2 id="hotels">Hôtels</h2>
+<ul>
+<li><a href="https://www.hotel-lemadame.com/">Le Madame</a></li>
+<li><a href="https://www.lamartinette.com/">La Martinette</a></li>
+<li><a href="https://auberge-nemoz.com/">Auberge Nemoz</a></li>
+<li><a href="https://www.aubergerie.com/chambres-d-hotes">L’Aubergerie</a></li>
+</ul>
+<h2 id="gites-de-france">Gîtes de France</h2>
+<ul>
+<li><a href="https://www.gites-de-france.com/fr/auvergne-rhone-alpes/isere/les-broquantins-38g163103">Gîte Les Broquantins</a></li>
+<li><a href="https://www.gites-de-france.com/fr/auvergne-rhone-alpes/isere/le-montagnard-38g163122">Gîte Le Montagnard</a></li>
+<li><a href="https://www.gites-de-france.com/fr/auvergne-rhone-alpes/isere/le-grand-thermos-38g163105">Gîte Le Grand Thermos</a></li>
+<li><a href="https://www.gites-de-france.com/fr/auvergne-rhone-alpes/isere/de-larguille-38g163107">Gîte de l’Arguille</a></li>
+<li><a href="https://www.gites-de-france.com/fr/auvergne-rhone-alpes/isere/les-dahus-tranquilles-gite-tout-compris-38g163121">Gîte Les Dahus Tranquilles</a></li>
+</ul>
+<h2 id="airbnb">AirBnB</h2>
+<ul>
+<li><a href="https://www.airbnb.fr/s/Haut~Br%C3%A9da--Allevard/homes?refinement_paths%5B%5D=%2Fhomes&amp;place_id=ChIJURWnYihPikcR-PrKA1z3XUY&amp;acp_id=t-g-ChIJURWnYihPikcR-PrKA1z3XUY&amp;date_picker_type=calendar&amp;source=structured_search_input_header&amp;search_type=user_map_move&amp;query=Haut-Br%C3%A9da%2C%20Allevard&amp;flexible_trip_lengths%5B%5D=one_week&amp;monthly_start_date=2025-09-01&amp;monthly_length=3&amp;monthly_end_date=2025-12-01&amp;search_mode=regular_search&amp;price_filter_input_type=2&amp;channel=EXPLORE&amp;ne_lat=45.34102359787339&amp;ne_lng=6.12071114591356&amp;sw_lat=45.26534051484088&amp;sw_lng=6.034985595951042&amp;zoom=13.384020544168925&amp;zoom_level=13.384020544168925&amp;search_by_map=true&amp;price_filter_num_nights=2&amp;checkin=2026-08-22&amp;checkout=2026-08-24&amp;disable_auto_translation=true">AirBnB à proximité</a></li>
+</ul>
+<h2 id="village-vacances">Village vacances</h2>
+<ul>
+<li><a href="https://www.ceveo.com/village/village-vacances-du-haut-breda-alpes">Ceveo</a></li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const siteNav = document.querySelector('.site-nav');
+            const siteHeader = document.querySelector('.site-header');
+            const body = document.body;
+
+            if (mobileToggle && siteNav && siteHeader) {
+                mobileToggle.addEventListener('click', function () {
+                    siteNav.classList.toggle('nav-open');
+                    mobileToggle.classList.toggle('active');
+                    siteHeader.classList.toggle('nav-expanded');
+                    body.classList.toggle('nav-open');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = siteNav.querySelectorAll('.page-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!mobileToggle.contains(e.target) && !siteNav.contains(e.target)) {
+                        siteNav.classList.remove('nav-open');
+                        mobileToggle.classList.remove('active');
+                        siteHeader.classList.remove('nav-expanded');
+                        body.classList.remove('nav-open');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
