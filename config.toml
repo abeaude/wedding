@@ -26,5 +26,5 @@ menu_items = [
     {name = "Hébergements", url = "/wedding/hebergements"},
     {name = "FAQ", url = "/wedding/faq"},
     {name = "RSVP", url = "/wedding/rsvp"},
-   # {name = "Cadeaux", url = "/wedding/cadeaux"},
+    {name = "Cadeaux", url = "/wedding/cadeaux"},
 ]
