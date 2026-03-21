@@ -766,7 +766,9 @@ a {
 }
 
 .card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 220px;
     /* Fixed width for all cards */
     margin: 0rem;
@@ -806,14 +808,90 @@ a {
 .card-content p {
     margin: 0;
     font-size: 0.9rem;
+    flex-grow: 1;
 }
 
 /* Responsive grid for multiple cards */
 .cards-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-gap: 0.5rem;
     justify-items: center;
     /* equivalent to 1rem margin on each side */
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.take-btn {
+    background: $secondary-color;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.take-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.take-btn:active {
+    transform: scale(0.97);
+}
+
+.take-btn:disabled {
+    background: #ddd;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.status-badge {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.status-badge::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.status-available {
+    background-color: #2ecc71;
+}
+
+.status-available::after {
+    background-color: #2ecc71;
+}
+
+.status-taken {
+    background-color: #e74c3c;
+}
+
+.status-taken::after {
+    background-color: #e74c3c;
 }

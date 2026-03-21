@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" data-id="{{ id }}">
     <a href="{{ url }}" target="_blank" rel="noopener noreferrer">
         <div class="card-image">
             <img src="{{ get_url(path=image) }}" alt="{{ alt }}" loading="lazy">
@@ -7,4 +7,9 @@
             <p>{{ description }}</p>
         </div>
     </a>
+
+    <div class="card-footer">
+        <button class="take-btn">Réserver</button>
+        <span class="status-badge"></span>
+    </div>
 </div>

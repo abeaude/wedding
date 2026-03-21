@@ -80,6 +80,88 @@
             }
         });
     </script>
+    <script>
+        const BIN_ID = "69be5dddaa77b81da9051015";
+        const API_KEY = "$2a$10$SdVYTiENyPMgxVM39EW3PuaAOHTcmFkV2ouhu3V96k1O6qshdV/cq";
+
+        let globalState = {};
+        let localOverrides = {}; // session-only changes
+
+        async function fetchState() {
+            const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+                headers: { "X-Access-Key": API_KEY }
+            });
+            const data = await res.json();
+            globalState = data.record || {};
+        }
+
+        async function saveState() {
+            await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Access-Key": API_KEY
+                },
+                body: JSON.stringify(globalState)
+            });
+        }
+
+        function updateUI() {
+            document.querySelectorAll('.card').forEach(card => {
+                const id = card.dataset.id;
+                const btn = card.querySelector('.take-btn');
+                const badge = card.querySelector('.status-badge');
+
+                const taken = localOverrides[id] ?? globalState[id];
+
+                badge.classList.remove('status-available', 'status-taken');
+
+                if (taken) {
+                    badge.classList.add('status-taken');
+                    btn.disabled = true;
+                } else {
+                    badge.classList.add('status-available');
+                    btn.disabled = false;
+                }
+            });
+        }
+
+        function setupActions() {
+            document.querySelectorAll('.card').forEach(card => {
+                const id = card.dataset.id;
+                const btn = card.querySelector('.take-btn');
+
+                btn.addEventListener('click', async () => {
+                    // already taken globally → block
+                    if (globalState[id]) return;
+
+                    // toggle locally
+                    localOverrides[id] = !localOverrides[id];
+
+                    updateUI();
+
+                    // confirm reservation
+                    if (localOverrides[id]) {
+                        const confirmTake = confirm("Confirmer la réservation ?");
+                        if (confirmTake) {
+                            globalState[id] = true;
+                            await saveState();
+                            updateUI();
+                        } else {
+                            localOverrides[id] = false;
+                            updateUI();
+                        }
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await fetchState();
+            setupActions();
+            updateUI();
+        });
+    </script>
 </body>
 
 </html>
