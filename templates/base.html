@@ -42,6 +42,20 @@
     {% block content %}
     {% endblock content %}
 
+    <div id="spinner-overlay" style="
+      position: fixed; inset: 0;
+      background: rgba(255,255,255,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 9999;
+    ">
+        <div class="spinner-ring"></div>
+        <span style="font-size: 14px; color: #666;">Loading…</span>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
@@ -87,12 +101,26 @@
         let globalState = {};
         let localOverrides = {}; // session-only changes
 
+        function showSpinner() {
+            const el = document.getElementById('spinner-overlay');
+            el.style.display = 'flex';
+        }
+
+        function hideSpinner() {
+            document.getElementById('spinner-overlay').style.display = 'none';
+        }
+
         async function fetchState() {
-            const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
-                headers: { "X-Access-Key": API_KEY }
-            });
-            const data = await res.json();
-            globalState = data.record || {};
+            showSpinner();
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+                    headers: { "X-Access-Key": API_KEY }
+                });
+                const data = await res.json();
+                globalState = data.record || {};
+            } finally {
+                hideSpinner(); // always hides, even if fetch throws
+            }
         }
 
         async function saveState() {
@@ -115,14 +143,16 @@
                 const taken = localOverrides[id] ?? globalState[id];
 
                 badge.classList.remove('status-available', 'status-taken');
-
-                if (taken) {
-                    badge.classList.add('status-taken');
-                    btn.disabled = true;
-                } else {
-                    badge.classList.add('status-available');
-                    btn.disabled = false;
+                if (id != "noces-1") {
+                    if (taken) {
+                        badge.classList.add('status-taken');
+                        btn.disabled = true;
+                    } else {
+                        badge.classList.add('status-available');
+                        btn.disabled = false;
+                    }
                 }
+
             });
         }
 
@@ -144,11 +174,18 @@
                     if (localOverrides[id]) {
                         const confirmTake = confirm("Confirmer la réservation ?");
                         if (confirmTake) {
-                            globalState[id] = true;
+                            if (id != "noces-1") {
+                                globalState[id] = true;
+                            } else {
+                                globalState[id] += 1;
+                            }
+
                             await saveState();
                             updateUI();
                         } else {
-                            localOverrides[id] = false;
+                            if (id != "noces-1") {
+                                localOverrides[id] = false;
+                            }
                             updateUI();
                         }
                     }
@@ -157,6 +194,12 @@
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
+            const noce_card = document.querySelector("div[data-id=noces-1]")
+            const noce_btn = noce_card.querySelector('.take-btn');
+            const noce_badge = noce_card.querySelector('.status-badge');
+            noce_btn.textContent = "Participer"
+            noce_badge.classList.remove('status-available', 'status-taken');
+            noce_badge.classList.add('counter');
             await fetchState();
             setupActions();
             updateUI();
