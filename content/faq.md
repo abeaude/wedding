@@ -40,7 +40,11 @@ Cela dépendra de la météo, mais dans tous les cas le dîner et la soirée ser
 
 Pas tout à fait mais on comprend l'idée. Pour les amateurs de fromages voici quelques recommendations de fromageries dans la région:
 
-* [La coopérative des entremonts](https://maps.app.goo.gl/qA4QhcfKyQQw2VRF7), dans le massif de la chartreuse. On vous recommande l'estival de réserve.
+* [La coopérative des entremonts](https://maps.app.goo.gl/qA4QhcfKyQQw2VRF7), dans le massif de la Chartreuse. On vous recommande l'estival de réserve.
 * [La Fromagerie La petite souris](https://maps.app.goo.gl/jaxPYve4vTCWEnoy8), dans le centre de Chambéry. Leur beaufort d'été est délicieux.
 * [La Ferme de la Grangette](https://maps.app.goo.gl/fe3PvVjeoy1xw2HT6), à Allevard. Pour découvrir des fromages locaux, en direct de la ferme.
 * [La chèvrerie des 7 Laux](https://maps.app.goo.gl/BPDipgHmWrNaPUqU6), à Theys. Pour les amateurs de fromage de chèvres.
+
+## Des indispenables à apporter ?
+
+Crème solaire et chapeau seront vos meilleurs alliés si la journée s'annonce chaude et ensoleillée. La montagne étant la montagne, le froid revient vite le soir. N'oubliez pas votre petite laine. 

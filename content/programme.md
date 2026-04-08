@@ -16,6 +16,8 @@ Nous vous attendons à partir de 14h au Gîte l'Essentiel.
 * 20h : dîner placé
 * 23h : début de la soirée dansante
 
+La cérémonie laïque se déroulera idéalement à l'extérieur, dans une zone sans ombre. Si la journée s'annonce ensoleillée, n'hésitez pas à prendre des chapeaux et de la crème solaire.Pour les frileux, sachez qu'en fin d'après-midi le soleil disparaîtra derrière la montagne et les températures pourront alors rapidement baisser.
+
 ## Dimanche 23 août 2026
 
 Pour ceux qui le peuvent, retrouvez-nous pour un brunch à partir de 11h, toujours au Gîte l'Essentiel.
