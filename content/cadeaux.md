@@ -94,6 +94,13 @@ Parce qu'on aime les bons restaurants, mais on aime aussi cuisiner à deux et vo
     description="Un véritable pétrin",
     id="petrin-1"
 ) }}
+{{ card(
+    url="https://www.riviera-et-bar.fr/products/chocolatiere-emulsionneur-induction-inox",
+    image="chocolatiere.webp",
+    alt="Une chocolatière",
+    description="Une chocolatière",
+    id="chocolatiere-1"
+) }}
 </div>
 
 ## Maison
