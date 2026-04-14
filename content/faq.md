@@ -48,3 +48,13 @@ Pas tout à fait mais on comprend l'idée. Pour les amateurs de fromages voici q
 ## Des indispenables à apporter ?
 
 Crème solaire et chapeau seront vos meilleurs alliés si la journée s'annonce chaude et ensoleillée. La montagne étant la montagne, le froid revient vite le soir. N'oubliez pas votre petite laine. 
+
+## Y-aura-t-il des cookies ?
+
+La réponse dépend de vous, il y a des cuisines sur le lieu. Voici la recette pour 6/8 cookies : 
+1. Mélanger 80g de beurre mou avec 25g de cassonade. N'hésitez pas à rammolir le beurre au bain marie. 
+2. Ajouter 130g de farine, 2g de levure chimique, 2g de sel, 1 oeuf.
+3. Ajouter 50g de chocolat haché (ou plus si vous êtes gourmand)
+4. Formez une boule. Laissez la reposer 30 min au congélateur. 
+5. Portionnez en boule individuelle et déposer sur une plaque de cuisson. Applatissez légèrement avec la paume de la main. 
+6. Cuire 8/10 min à 180°C. 
