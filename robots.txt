@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://wedding.juliette-aurelien.fr/sitemap.xml
