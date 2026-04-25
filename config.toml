@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://juliette-aurelien.fr/"
+base_url = "https://wedding.juliette-aurelien.fr/"
 title = "Juliette & Aurélien"
 description = ""
 default_language = "fr"
